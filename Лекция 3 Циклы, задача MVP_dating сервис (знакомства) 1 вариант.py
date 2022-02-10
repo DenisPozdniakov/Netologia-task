@@ -10,6 +10,13 @@ def add_user():
     girls.append(nickname_user)
   else:
     print('Вы указали некорректный "Пол", пожалуйста повторите операцию')
+def main():
+  boys.sort()
+  girls.sort()
+  print('Идеальные пары:')
+  for i in range(len(boys)):
+    print(boys[i], 'и', girls[i])
+  
     
 ### Основная программа
 boys = ['Peter', 'Alex', 'John', 'Arthur', 'Richard']
@@ -33,14 +40,12 @@ if len(boys) != len(girls):
     x1,x2 = 'Мужчин', 'Женщин'
   else:
     x2,x1 = 'Мужчин', 'Женщин'
-  print('К сожалению мы не можем подобрать идеальную пару, т.к. количество {0} превышает количество {1}, пожалуйста добавьте пользователей{1}'.format(x1,x2))
+  print('К сожалению мы не можем подобрать идеальную пару, т.к. количество {0} превышает количество {1}, пожалуйста добавьте пользователей: {1}'.format(x1,x2))
   add_user()
+  main()
 else:
-  boys.sort()
-  girls.sort()
-  print('Идеальные пары:')
-  for i in range(len(boys)):
-    print(boys[i], 'и', girls[i])
+  main()
+
 
 
 
